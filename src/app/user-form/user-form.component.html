@@ -1,0 +1,14 @@
+<h2>{{ user.id === 0 ? 'Add User' : 'Edit User' }}</h2>
+
+<form (ngSubmit)="saveUser()">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="user.name" name="name" required />
+
+  <label for="email">Email:</label>
+  <input id="email" [(ngModel)]="user.email" name="email" required />
+
+  <label for="phone">Phone:</label>
+  <input id="phone" [(ngModel)]="user.phone" name="phone" required />
+
+  <button type="submit">{{ user.id === 0 ? 'Add' : 'Update' }}</button>
+</form>
